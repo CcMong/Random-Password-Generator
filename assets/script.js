@@ -180,7 +180,21 @@ function getPasswordOptions() {
       alert(
         "ERROR - Invalid options. You must select * at least ONE * character type from the following:\n - Lowercase\n - Uppercase\n - Numeric\n - Special characters "
       );
+    } else {  // To exit the while loop
+
+      validCharacterOptions = true; // It is at this point that we will want to store the user's character options in our object for use in generating the password
+
+      passwordOptions.lowercase = lowercaseOption;
+      passwordOptions.uppercase = uppercaseOption;
+      passwordOptions.numeric = numericOption;
+      passwordOptions.special = specialCharacterOption;
+
+      passwordArray = []; // This variable was declared globally, but will be reassigned to an empty array at this point, right after the user responses are stored in the object. This is so that every time the "Generate Password" button is clicked, it will go through the cycle without retaining elements from previous passwords and adding to them.
+
+      relevantArraysMerged = []; // Same as with passwordArray above
+
     }
+
   }
 
 
