@@ -225,7 +225,7 @@ function getPasswordOptions() {
   }
 
   /* 2. Generating the Random Password
-=====================================*/ 
+  =====================================*/ 
 
   /* First ensure that the generated password contains at least one character of each type requested by the user. Do this by populating the passwordArray with one character of each type requested by the user. 
 
@@ -263,13 +263,11 @@ function getPasswordOptions() {
 
   // This loop above will keep adding random characters to passwordArray until its length matches the user length requirement
 
+  // Lastly, shuffle the passwordArray before displaying it, so that the initial elements into passwordArray will not always be the first elements in the array.
 
+  arrayShuffle(passwordArray);
 
-
-
-
-
-
+  alert('Your password has now been generated. You can copy it by clicking "Copy Password"');
 
 }
 // Function to prompt user for password options
