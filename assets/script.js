@@ -241,19 +241,19 @@ function getPasswordOptions() {
   if(passwordOptions.uppercase === true) {
 
     getRandomIndexAndAddToArray(upperCasedCharacters, passwordArray);    
-    incrementalArrayMerge(lowerCasedCharacters);
+    incrementalArrayMerge(upperCasedCharacters);
   }
   
   if(passwordOptions.numeric === true) {
 
     getRandomIndexAndAddToArray(numericCharacters, passwordArray);
-    incrementalArrayMerge(lowerCasedCharacters);
+    incrementalArrayMerge(numericCharacters);
   }
   
   if(passwordOptions.special === true) {
 
     getRandomIndexAndAddToArray(specialCharacters, passwordArray);    
-    incrementalArrayMerge(lowerCasedCharacters);
+    incrementalArrayMerge(specialCharacters);
   }
 
   do { 

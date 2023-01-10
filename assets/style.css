@@ -23,7 +23,7 @@ body {
   padding-right: 20px;
 }
 
-header {
+header, h2 {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
