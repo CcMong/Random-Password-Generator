@@ -115,8 +115,16 @@ function getRandomIndexAndAddToArray(array1, array2) {
 
 }
 
+// Function to incrementally add an array to relevantArraysMerged:
+
+function incrementalArrayMerge(array) { 
+
+  relevantArraysMerged = relevantArraysMerged.concat(array);
+
+}
+
 /*1a. Getting User's Password Length Preference
-  ------------------------------------------------*/
+  ----------------------------------------------*/
 
 // Function to prompt user for password options
 
@@ -208,7 +216,7 @@ function getPasswordOptions() {
 
 
 
-
+}
 // Function to prompt user for password options
 function getPasswordOptions() {
 
