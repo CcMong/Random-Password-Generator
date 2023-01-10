@@ -299,3 +299,19 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword); 
+
+
+/* 4. Functionality to Copy the Password to the Clipboard
+==========================================================*/
+
+// Function to copy the password to the clipboard after it has been written to the password input:
+
+function copyPassword() {
+
+  var userClipBoard = navigator.clipboard;
+  
+  var textToCopy = passwordArray.join("");
+
+  userClipBoard.writeText(textToCopy).then(() => alert("Password copied to clipboard"));
+
+}
