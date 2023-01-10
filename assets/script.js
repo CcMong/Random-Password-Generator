@@ -101,6 +101,12 @@ var passwordOptions = {
   special: false,
 };
 
+var passwordArray = []; // This is the empty array we will drop values in that will eventually form the generated password
+
+var relevantArraysMerged = []; // This is where we will drop and mix in the elements of all the character arrays that correspond to the user's preferences. We will then be able to pick from this array to populate passwordArray
+
+// Next, create a function (in global scope) with two arrays as parameters, that: 1.) pulls out a random element from the first array, and then 2.) pushes this element onto the end of the second array.
+
 
 
 // Function to prompt user for password options
