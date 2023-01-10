@@ -245,6 +245,17 @@ function getPasswordOptions() {
     incrementalArrayMerge(lowerCasedCharacters);
   }
 
+  do { 
+    getRandomIndexAndAddToArray(relevantArraysMerged, passwordArray);
+
+  } while (passwordArray.length < passwordOptions.length);
+
+  // This loop above will keep adding random characters to passwordArray until its length matches the user length requirement
+
+  
+
+
+
 
 
 }
