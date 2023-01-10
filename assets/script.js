@@ -105,6 +105,16 @@ var passwordArray = []; // This is the empty array we will drop values in that w
 
 var relevantArraysMerged = []; // This is where we will drop and mix in the elements of all the character arrays that correspond to the user's preferences. We will then be able to pick from this array to populate passwordArray
 
+// Function with two arrays as parameters, that: 1.) pulls out a random element from the first array, and then 2.) pushes this element onto the end of the second array.
+
+function getRandomIndexAndAddToArray(array1, array2) {
+
+  var randomIndex = Math.floor((Math.random() * array1.length));
+  
+  array2.push(array1[randomIndex]);
+
+}
+
 /*1a. Getting User's Password Length Preference
   ------------------------------------------------*/
 
@@ -192,10 +202,10 @@ function getPasswordOptions() {
       passwordArray = []; // This variable was declared globally, but will be reassigned to an empty array at this point, right after the user responses are stored in the object. This is so that every time the "Generate Password" button is clicked, it will go through the cycle without retaining elements from previous passwords and adding to them.
 
       relevantArraysMerged = []; // Same as with passwordArray above
-
     }
-
   }
+
+
 
 
 
