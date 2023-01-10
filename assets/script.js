@@ -298,7 +298,7 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener('click', writePassword); 
+generateBtn.addEventListener('click', writePassword); // Calls the writePassword function when clicked
 
 
 /* 4. Functionality to Copy the Password to the Clipboard
@@ -320,5 +320,15 @@ function copyPassword() {
 var copyBtn = document.querySelector("#copy");
 
 // Add event listener to the copy button:
-copyBtn.addEventListener("click", copyPassword);
+copyBtn.addEventListener("click", copyPassword); // Calls the copyPassword function when clicked
+
+// Function to enable the copy button only after the password has been generated:
+
+function enableButton() {
+
+  copyBtn.disabled = false;
+
+}
+
+generateBtn.addEventListener("click", enableButton); // To enable Copy Password button when clicked
 
