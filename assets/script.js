@@ -213,6 +213,37 @@ function getPasswordOptions() {
     }
   }
 
+  /* 2. Generating the Random Password
+=====================================*/ 
+
+  /* First ensure that the generated password contains at least one character of each type requested by the user. Do this by populating the passwordArray with one character of each type requested by the user. 
+
+  Then we want to create one large array that contains all possible characters that could possibly match the user's preferences. From this large array, relevantArraysMerged, we can now randomly pick characters to populate passwordArray until the number of elements equals the user specified length. */
+  
+  if(passwordOptions.lowercase === true) {
+
+    getRandomIndexAndAddToArray(lowerCasedCharacters, passwordArray);
+    incrementalArrayMerge(lowerCasedCharacters);
+  
+  }
+  
+  if(passwordOptions.uppercase === true) {
+
+    getRandomIndexAndAddToArray(upperCasedCharacters, passwordArray);    
+    incrementalArrayMerge(lowerCasedCharacters);
+  }
+  
+  if(passwordOptions.numeric === true) {
+
+    getRandomIndexAndAddToArray(numericCharacters, passwordArray);
+    incrementalArrayMerge(lowerCasedCharacters);
+  }
+  
+  if(passwordOptions.special === true) {
+
+    getRandomIndexAndAddToArray(specialCharacters, passwordArray);    
+    incrementalArrayMerge(lowerCasedCharacters);
+  }
 
 
 
