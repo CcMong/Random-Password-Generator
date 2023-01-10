@@ -88,6 +88,21 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+/* 1. Getting User Requirements for the Password
+=================================================*/
+
+//First create an object in which we will store all the user password preferences
+
+var passwordOptions = {
+  length: 0,
+  lowercase: false, //These are initial placeholder values which will change depending on user choices
+  uppercase: false,
+  numeric: false,
+  special: false,
+};
+
+
+
 // Function to prompt user for password options
 function getPasswordOptions() {
 
