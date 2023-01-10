@@ -270,18 +270,14 @@ function getPasswordOptions() {
   alert('Your password has now been generated. You can copy it by clicking "Copy Password"');
 
 }
-// Function to prompt user for password options
-function getPasswordOptions() {
-
-}
-
-// Function for getting a random element from an array
-function getRandom(arr) {
-
-}
 
 // Function to generate password with user input
+
 function generatePassword() {
+
+  getPasswordOptions();
+  
+  return passwordArray.join(""); // Turn the array elements into a string of characters. This is what will show in the text area of the webpage
 
 }
 
