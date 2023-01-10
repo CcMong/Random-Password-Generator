@@ -168,6 +168,19 @@ function getPasswordOptions() {
     var specialCharacterOption = confirm(
       "Please confirm if you would like * special characters * in your password.\n OK - Yes, Cancel - No"
     );
+
+    // At this point, if the user has declined all character options, an error message should appear that prompts them to choose at least one option
+    
+    if (
+      lowercaseOption === false &&
+      uppercaseOption === false &&
+      numericOption === false &&
+      specialCharacterOption === false
+    ) {
+      alert(
+        "ERROR - Invalid options. You must select * at least ONE * character type from the following:\n - Lowercase\n - Uppercase\n - Numeric\n - Special characters "
+      );
+    }
   }
 
 
