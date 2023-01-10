@@ -119,6 +119,29 @@ function getPasswordOptions() {
       "How many password characters would you like?\n Enter a number between 10 and 64", "Number between 10 and 64"
     ); 
 
+    if (userNumberInput === null) {  // Clicking 'Cancel' produces a null value
+      
+      location.reload(); // The page should reload if the user clicks 'Cancel' on the password length prompt
+      return; // Clicking 'Cancel'should break out of the function. 
+
+      //Also this null test comes first, otherwise "null" would satisfy the < 10 condition and so clicking 'Cancel' would trigger an error message.
+
+    } else if (
+      Number.isNaN(Number(userNumberInput)) || 
+      userNumberInput < 10 ||
+      userNumberInput > 64
+    ) {
+      // Prompt outputs are usually strings. So the first condition checks for text inputs which, when converted to number, will output NaN.
+
+      alert("ERROR - Invalid input. You must enter a * number between 10 and 64 *"); 
+
+    } else { // To exit the while loop
+      
+      validNumberEntry = true; 
+
+      passwordOptions.length = userNumberInput;// At this point, the password length preference is stored into the passwordOptions object once we are satisfied with the validity
+    } 
+
   }
 }
 
