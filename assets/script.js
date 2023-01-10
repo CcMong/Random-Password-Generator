@@ -315,3 +315,10 @@ function copyPassword() {
   userClipBoard.writeText(textToCopy).then(() => alert("Password copied to clipboard"));
 
 }
+
+// Get references to the element with the #copy id:
+var copyBtn = document.querySelector("#copy");
+
+// Add event listener to the copy button:
+copyBtn.addEventListener("click", copyPassword);
+
