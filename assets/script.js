@@ -105,7 +105,22 @@ var passwordArray = []; // This is the empty array we will drop values in that w
 
 var relevantArraysMerged = []; // This is where we will drop and mix in the elements of all the character arrays that correspond to the user's preferences. We will then be able to pick from this array to populate passwordArray
 
-// Next, create a function (in global scope) with two arrays as parameters, that: 1.) pulls out a random element from the first array, and then 2.) pushes this element onto the end of the second array.
+/*1a. Getting User's Password Length Preference
+  ------------------------------------------------*/
+
+// Function to prompt user for password options
+
+function getPasswordOptions() {    
+          
+  var validNumberEntry = false; //This variable stores the validity of the user's response as a boolean
+  while (validNumberEntry === false) {
+
+    var userNumberInput = prompt(
+      "How many password characters would you like?\n Enter a number between 10 and 64", "Number between 10 and 64"
+    ); 
+
+  }
+}
 
 
 
