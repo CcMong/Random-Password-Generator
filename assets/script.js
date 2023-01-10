@@ -143,7 +143,32 @@ function getPasswordOptions() {
     } 
 
   }
-}
+
+/* 1b. Getting User's Character Preferences
+--------------------------------------------*/
+
+  var validCharacterOptions = false; // This variable stores the collective validity of the user's character preferences as a boolean
+
+  while (validCharacterOptions === false) {
+
+    // Now the user will be asked about character preferences. The responses will be stored in variables
+
+    var lowercaseOption = confirm(
+      "Please confirm if you would like * lowercase characters * in your password.\n OK - Yes, Cancel - No"
+    );
+    
+    var uppercaseOption = confirm(
+      "Please confirm if you would like * uppercase characters * in your password.\n OK - Yes, Cancel - No"
+    );    
+    
+    var numericOption = confirm(
+      "Please confirm if you would like * numeric characters * in your password.\n OK - Yes, Cancel - No"
+    );
+    
+    var specialCharacterOption = confirm(
+      "Please confirm if you would like * special characters * in your password.\n OK - Yes, Cancel - No"
+    );
+  }
 
 
 
