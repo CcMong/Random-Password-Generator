@@ -123,6 +123,17 @@ function incrementalArrayMerge(array) {
 
 }
 
+// Function for Shuffling the Password Array: 
+// Better sorting methods and algorithms, such as the Fisher-Yates Algorithm, exist but I don't seek to perfectly randomise the array. I just don't want the first 1-4 "compulsory" elements added into the password array (based on user preferences) to retain their positions when displaying the final password.
+
+function arrayShuffle(array) {
+
+  array.sort( () => 0.5 - Math.random());
+
+  return array;
+    
+} 
+
 /*1a. Getting User's Password Length Preference
   ----------------------------------------------*/
 
@@ -252,7 +263,9 @@ function getPasswordOptions() {
 
   // This loop above will keep adding random characters to passwordArray until its length matches the user length requirement
 
-  
+
+
+
 
 
 
