@@ -284,13 +284,18 @@ function generatePassword() {
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
+
+/* 3. Displaying the Password in the Text Area
+=============================================== */
+
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+
+  var password = generatePassword(); // The generated password will be returned and stored in the 'password' variable
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
+generateBtn.addEventListener('click', writePassword); 
